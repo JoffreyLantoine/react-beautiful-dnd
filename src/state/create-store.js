@@ -6,6 +6,7 @@ import lift from './middleware/lift';
 import style from './middleware/style';
 import drop from './middleware/drop/drop-middleware';
 import scrollListener from './middleware/scroll-listener';
+import viewportScrollListener from './middleware/viewport-scroll-listener';
 import responders from './middleware/responders/responders-middleware';
 import dropAnimationFinish from './middleware/drop/drop-animation-finish-middleware';
 import dropAnimationFlushOnScroll from './middleware/drop/drop-animation-flush-on-scroll-middleware';
@@ -89,6 +90,7 @@ export default ({
         pendingDrop,
         autoScroll(autoScroller),
         scrollListener,
+        viewportScrollListener,
         focus(focusMarshal),
         // Fire responders for consumers (after update to store)
         responders(getResponders, announce),
